@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LeetCode135：分发糖果</title>
+      <link href="/2022/11/13/leetcode135-fen-fa-tang-guo/"/>
+      <url>/2022/11/13/leetcode135-fen-fa-tang-guo/</url>
+      
+        <content type="html"><![CDATA[<p>规则定义：设学生 A 和学生 B 左右相邻，A 在 B 左边；<br>        左规则：当rating<del>B</del> &gt; rating<del>A</del>时，B的糖果比A的糖果数量多。<br>        右规则：当rating<del>A</del> &gt; rating<del>B</del>时，A的糖果比B的糖果数量多。</p><p>相邻的学生中，评分高的学生必须获得更多的糖果 <strong>等价于</strong> 所有学生满足左规则且满足右规则。</p><p>算法流程：</p><ol><li>先从左至右遍历学生成绩 ratings，按照以下规则给糖，并记录在 left 中：<ol><li>先给所有学生 1 颗糖；</li><li>若ratings<del>i</del> &gt; ratings<del>i-1</del>，则第i名学生的糖比第i-1名学生多1颗；</li><li>若ratings<del>i</del> &lt;= ratings<del>i-1</del>，则第 i 名学生糖数量不变。（交由从右向左遍历时处理。）<br>经过此规则分配后，可以保证所有学生糖数量 满足左规则 。同理，在此规则下从右至左遍历学生成绩并记录在 right 中，可以保证所有学生糖数量<strong>满足左规则</strong>。</li></ol></li><li>同理，在此规则下从右至左遍历学生成绩并将糖果数记录在right中，可保证所有学生糖数量<strong>满足右规则</strong></li><li>最终，取以上2轮遍历left和right对应学生糖果数的最大值 ，这样则<strong>同时满足左规则和右规则</strong>，即得到每个同学的最少糖果数量。</li></ol><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//开两个数组，好理解int candy(vector&lt;int&gt;&amp; ratings) {int len = ratings.size();if(len&lt;2){            return len; //长度即为总糖果数        }vector&lt;int&gt; left(len, 1);    //每个学生最少分配1个糖果vector&lt;int&gt; right(len, 1);    for(int i=0; i&lt;len-1; i++){if(ratings[i+1] &gt; ratings[i]){left[i+1] = left[i]+1;}}for(int i=len-1; i&gt;0; i--){if(ratings[i-1] &gt; ratings[i]){right[i-1] = right[i]+1;}}    int total = 0;for(int i=0; i&lt;len; i++){total += max(left[i], right[i]);}return total;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//开一个数组int candy(vector&lt;int&gt;&amp; ratings) {    int length = ratings.size();    if(length&lt;2){        return length;    }    vector&lt;int&gt; num(length, 1);    for(int i=0; i&lt;length-1; i++){        if(ratings[i+1]&gt; ratings[i]){            num[i+1] = num[i]+1;        }    }    for(int i=length-1; i&gt;0; i--){        if(ratings[i-1] &gt; ratings[i]){            num[i-1] = max(num[i-1] ,num[i]+1);        }    }    return accumulate(num.begin(), num.end(), 0);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贪心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/12/02/hello-world/"/>
       <url>/2021/12/02/hello-world/</url>
