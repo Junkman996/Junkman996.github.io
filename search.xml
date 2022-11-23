@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Difference between working directory and local repository</title>
+      <link href="/2022/11/23/difference-between-working-directory-and-local-repository/"/>
+      <url>/2022/11/23/difference-between-working-directory-and-local-repository/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123093910760.png" alt="image-20221123093910760"></p><p><strong>working directory（workspace）</strong>：workspace = working directory = project folder，其实就是本地电脑里的文件<br><strong>repository</strong>：实际上就是working directory里的.git隐藏文件夹</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123093045549.png" alt="image-20221123093045549"></p><p><strong>Step 1: Creating a working directory/workspace</strong></p><p>在本地<strong>新建文件夹</strong>即可实现</p><p><strong>Step 2: Creating a repository</strong></p><p>git commit可在本地生成一个.git文件夹，实际上就是local repository</p><p><strong>Step 3: The working directory and repository in depth</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123093412241.png" alt="image-20221123093412241"></p><p><strong>Step 4: Adding a file</strong> </p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123093458051.png" alt="image-20221123093458051"></p><p>在本地新建example.txt文件，这时只在working directory（本地），还没有被add到repository，不能对其进行版本管理。</p><p><strong>Step 5: Adding the file to our repository</strong> </p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123093641206.png" alt="image-20221123093641206"></p><p>git add可实现将example.txt从working directory<strong>复制</strong>到local repository，这样example.txt就可以被Git追踪了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git命令解释与踩坑记录</title>
+      <link href="/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/"/>
+      <url>/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<p>在Pycharm中（）改动后，需要add</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221122200729751.png" alt="image-20221122200729751"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode135：分发糖果</title>
       <link href="/2022/11/13/leetcode135-fen-fa-tang-guo/"/>
       <url>/2022/11/13/leetcode135-fen-fa-tang-guo/</url>
