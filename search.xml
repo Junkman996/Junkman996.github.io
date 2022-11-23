@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>‘Typora使用经验积累’</title>
+      <link href="/2022/11/23/typora-shi-yong-jing-yan-ji-lei/"/>
+      <url>/2022/11/23/typora-shi-yong-jing-yan-ji-lei/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1. 代码块"></a>1. 代码块</h1><p>连续输入三个‘~’再输入想使用的语言，代码块建成之后也可在右下角手动修改所用语言。</p><h1 id="2-MathType公式复制到Typora"><a href="#2-MathType公式复制到Typora" class="headerlink" title="2. MathType公式复制到Typora"></a>2. MathType公式复制到Typora</h1><ol><li><p>在MathType打好公式并复制，需在MathType中将复制格式修改为PlainTex</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123153510409.png" alt="image-20221123153510409"></p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123153127939.png" alt="image-20221123153127939"></p></li><li><p>粘贴到MathType会这样显示：<br><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154440805.png" alt="image-20221123154440805"><br>Typora不会将粘贴过来的$$识别为公式栏，需手动输入$$并按回车创建公式栏</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154657476.png" alt="image-20221123154657476"><br>然后将复制过来的文本删除两端的$$粘贴到公式栏<br><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154805596.png" alt="image-20221123154805596"></p><h1 id="3-条件概率"><a href="#3-条件概率" class="headerlink" title="3. 条件概率"></a>3. 条件概率</h1><p>菜单栏：编辑-&gt;插入符号</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Typora </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MathType书写公式经验记录</title>
+      <link href="/2022/11/23/mathtype-shu-xie-gong-shi-jing-yan-ji-lu/"/>
+      <url>/2022/11/23/mathtype-shu-xie-gong-shi-jing-yan-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-中-英文状态下输入"><a href="#1-中-英文状态下输入" class="headerlink" title="1. 中/英文状态下输入"></a>1. 中/英文状态下输入</h1><p>中文状态下输入字母不是斜体的，书写公式时建议切换输入法至英文状态。</p><h1 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h1><h2 id="2-1-最常用（Ctrl-字母）"><a href="#2-1-最常用（Ctrl-字母）" class="headerlink" title="2.1 最常用（Ctrl+字母）"></a>2.1 最常用（Ctrl+字母）</h2><p>Tab跳格<br>[Ctrl+H]上标    [Ctrl+L]下标    [Ctrl+J]上下标<br>[Ctrl+9/0]小括号()    [Ctrl+[ ]中括号[]    [Ctrl+shift+[ ]大括号{}        注：ctrl快捷键输出的括号和通常使用shift输出的括号是不一样的。<br>[Ctrl+R]根号radical    [CTRL+F]分式fractional    [Ctrl+/]斜杠分式</p><h2 id="2-2-次常用（前缀键，字母）"><a href="#2-2-次常用（前缀键，字母）" class="headerlink" title="2.2 次常用（前缀键，字母）"></a>2.2 次常用（前缀键，字母）</h2><h2 id="2-3-希腊字母的快捷键（Ctrl-G，字母）"><a href="#2-3-希腊字母的快捷键（Ctrl-G，字母）" class="headerlink" title="2.3 希腊字母的快捷键（Ctrl+G，字母）"></a>2.3 希腊字母的快捷键（Ctrl+G，字母）</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> MathType </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>白板推导1-1 绪论</title>
+      <link href="/2022/11/23/bai-ban-tui-dao-1-1-xu-lun/"/>
+      <url>/2022/11/23/bai-ban-tui-dao-1-1-xu-lun/</url>
+      
+        <content type="html"><![CDATA[<p>对概率的诠释有两大学派：频率派和贝叶斯派。</p><p>后续对观测集采用下面记号：<br>$$<br>{X_{N \times p}} = {\left( { {x_1},{x_2}, \cdots ,{x_N}} \right)^T},{x_i} = {\left( { {x_{i1}},{x_{i2}}, \cdots ,{x_{ip}}} \right)^T}<br>$$<br>这个记号表示有N个样本，每个样本都是p维向量。其中每个观测都是由p(x|θ)生成的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 白板推导 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Difference between working directory and local repository</title>
       <link href="/2022/11/23/difference-between-working-directory-and-local-repository/"/>
       <url>/2022/11/23/difference-between-working-directory-and-local-repository/</url>
