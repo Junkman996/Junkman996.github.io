@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>阅读论文积累词汇</title>
+      <link href="/2022/11/24/yue-du-lun-wen-ji-lei-ci-hui/"/>
+      <url>/2022/11/24/yue-du-lun-wen-ji-lei-ci-hui/</url>
+      
+        <content type="html"><![CDATA[<ol><li>It is thus reasonable for us to conjecture that SPP should improve more sophisticated convolutional architectures.</li><li>The SPP-net-based system computes features 24-102× faster than R-CNN, while has better or comparable accuracy. </li><li>The first five layers are convolutional, some of which are followed by pooling layers. These pooling layers can also be considered as “convolutional”, in the sense that they are using sliding windows.</li><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Paper </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>‘Typora使用经验积累’</title>
       <link href="/2022/11/23/typora-shi-yong-jing-yan-ji-lei/"/>
       <url>/2022/11/23/typora-shi-yong-jing-yan-ji-lei/</url>
@@ -96,7 +115,7 @@
       <link href="/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/"/>
       <url>/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/</url>
       
-        <content type="html"><![CDATA[<p>在Pycharm中（）改动后，需要add</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221122200729751.png" alt="image-20221122200729751"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221122200729751.png"></p><h2 id="1-删除remote-repository的某个文件"><a href="#1-删除remote-repository的某个文件" class="headerlink" title="1. 删除remote repository的某个文件"></a>1. 删除remote repository的某个文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> test.txt<span class="token comment">#在实践中，该命令将workspace和local repository中的文件都删除了</span><span class="token comment">##然后commit+push</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
