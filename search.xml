@@ -4,6 +4,165 @@
   
     
     <entry>
+      <title>论文笔记_MOTR-End-to-End-Multiple-Object-Tracking-with-Transformer</title>
+      <link href="/2023/03/02/lun-wen-bi-ji-motr-end-to-end-multiple-object-tracking-with-transformer/"/>
+      <url>/2023/03/02/lun-wen-bi-ji-motr-end-to-end-multiple-object-tracking-with-transformer/</url>
+      
+        <content type="html"><![CDATA[<p>【ECCV2022】 - MOTR：使用Transformer进行端到端的多目标追踪</p><p>【Paper】<a href="https://arxiv.org/abs/2105.03247">https://arxiv.org/abs/2105.03247</a></p><p>【Code】<a href="https://github.com/megvii-research/MOTR">https://github.com/megvii-research/MOTR</a></p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>​        在多目标追踪中，对象/目标的时序建模是一项关键性挑战。现有方法通过基于运动的和基于外观的相似度来进行检测结果的关联，从而实现跟踪；而这种关联的后处理特性，使得其不能够端到端地利用视频序列的时序变量。</p><p>​        基于此，作者提出MOTR。MOTR对DETR进行扩展，并引入track query</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多目标跟踪 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Transformer</title>
+      <link href="/2023/03/02/transformer/"/>
+      <url>/2023/03/02/transformer/</url>
+      
+        <content type="html"><![CDATA[<p>【ECCV2022】 - MOTR：使用Transformer进行端到端的多目标追踪</p><p>【Paper】<a href="https://arxiv.org/abs/2105.03247">https://arxiv.org/abs/2105.03247</a></p><p>【Code】<a href="https://github.com/megvii-research/MOTR">https://github.com/megvii-research/MOTR</a></p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>​        在多目标追踪中，对象/目标的时序建模是一项关键性挑战。现有方法通过基于运动的和基于外观的相似度来进行检测结果的关联，从而实现跟踪；而这种关联的后处理特性，使得其不能够端到端地利用视频序列的时序变量。</p><p>​        基于此，作者提出MOTR。MOTR对DETR进行扩展，并引入track query</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>河工大Pytorch深度学习实践</title>
+      <link href="/2023/03/02/he-gong-da-pytorch-shen-du-xue-xi-shi-jian/"/>
+      <url>/2023/03/02/he-gong-da-pytorch-shen-du-xue-xi-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301101130351.png" alt="image-20230301101130351" style="zoom:67%;"><h1 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h1><p>可视化问题：可视化训练过程的工具：Visdom</p><p>断点问题：为了应对训练过程中程序崩溃，需要在训练时对模型进行持久化（定期存盘）。</p><p>绘制曲面图形：可以尝试np.meshgrid()</p><h1 id="梯度下降算法"><a href="#梯度下降算法" class="headerlink" title="梯度下降算法"></a>梯度下降算法</h1><p>随机梯度下降：每次计算的不再是总损失，而是随机选取一个样本计算损失。<br>随机梯度下降，引入随机性，有可能跨过鞍点。</p><p>梯度下降时间复杂度低，但是性能也低；随机梯度下降性能高，但是时间复杂度也高。<br>梯度下降和随机梯度下降的这种：Mini-Batch，批量随机梯度下降，选取一个Batch的样本计算损失。</p><h1 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h1><p>《matrix-cook-book》：矩阵计算公式书 </p><p>Pytorch是动态计算图，进行backward之后将计算结果保存之后，计算图会被释放 ，下次forward再重新建立。<br><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301133845424.png" alt="image-20230301133845424" style="zoom:33%;"><br><code>w.data = w.data - 0.01 * w.grad.data</code>，只是为了修改w的数值，取张量的data进行计算是不会建立计算图的。<br>张量的grad是一个张量，直接使用w.grad会建立计算图。<br><code>w.grad.item()</code>是直接将梯度取出当作Python里的标量。<br><code>w.grad.data.zero_()</code>经过backward()计算的梯度会被累积，更新梯度后记得将grad清零</p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301135019625.png" alt="image-20230301135019625" style="zoom: 33%;"><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301135052371.png" alt="image-20230301135052371" style="zoom: 33%;"><h1 id="用Pytorch实现线性回归"><a href="#用Pytorch实现线性回归" class="headerlink" title="用Pytorch实现线性回归"></a>用Pytorch实现线性回归</h1><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301140354890.png" alt="image-20230301140354890" style="zoom:50%;"><p>所有的模型类均需要继承nn.Module，它是所有神经网络组件的基类。<br>必须要实现构造函数和forward函数；backward不用写，nn.Module会自动实现。</p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301141518808.png" alt="image-20230301141518808" style="zoom:33%;"><p>model.parameters()会检查model的所有成员，如果有权重，会把它们加入到需要训练的参数集合中。</p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230301142212365.png" alt="image-20230301142212365" style="zoom: 50%;"><h1 id="逻辑斯谛回归"><a href="#逻辑斯谛回归" class="headerlink" title="逻辑斯谛回归"></a>逻辑斯谛回归</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Pytorch </tag>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>黑马程序员Linux</title>
+      <link href="/2023/03/02/hei-ma-cheng-xu-yuan-linux/"/>
+      <url>/2023/03/02/hei-ma-cheng-xu-yuan-linux/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="导学"><a href="#导学" class="headerlink" title="导学"></a>导学</h2><p>个人桌面操作系统：Windows和macOS相互竞争；而服务器操作系统只有Linux</p><h2 id="Linux初识"><a href="#Linux初识" class="headerlink" title="Linux初识"></a>Linux初识</h2><h3 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h3><p>Linux系统两部分组成：Linux系统内核和系统级应用程序。<br>内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。<br>系统级应用程序，可以理解为出场自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、音乐播放等。</p><p><img src="http://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230228141126994.png" alt="image-20230228141126994"></p><p>内核是Linux最核心的存在，系统级应用程序只是锦上添花。<br>Linux内核是免费开源的，任何人都可以下载内核源码查看并修改。</p><h3 id="Linux发行版"><a href="#Linux发行版" class="headerlink" title="Linux发行版"></a>Linux发行版</h3><p>任何人都可以获得并修改内核，并且自行集成系统级程序，提供了内核+系统级程序的完整封装，称之为Linux发行版。<br>内核无法被用户直接使用，需要配合应用程序才能被用户使用。<br>在内核之上，封装系统级应用程序，组合在一起称之为Linux发行版。</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230228152430279.png" alt="image-20230228152430279"></p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230228152639147.png" alt="image-20230228152639147"></p><p>不同发行版的基础命令是100%相同的。</p><h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>虚拟机=操作系统（软件）+虚拟硬件。<br>借助虚拟化技术，我们可以在系统中，通过软件，模拟计算机硬件，并给虚拟硬件安装真实的操作系统。</p><h3 id="虚拟化软件"><a href="#虚拟化软件" class="headerlink" title="虚拟化软件"></a>虚拟化软件</h3><p>虚拟化技术可以模拟出计算机硬件，有专门的虚拟化软件可以提供虚拟化技术。<br>VMware WorkStation </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python积累</title>
+      <link href="/2023/03/02/python-ji-lei/"/>
+      <url>/2023/03/02/python-ji-lei/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>（LeetCode1两数之和）使用一个整数区间控制for循环：<code>for i in range(m, n)</code></p></li><li><p>（LeetCode1）enumerate()函数用于将一个可遍历的数据对象组合为一个索引序列，同时列出数据下标和数据，且可以t通过start参数指定下标从几开始，一般用于for循环中。<br>现有列表list = [7, 8, 9]，<code>for num, i in enumerate(list, [start=0])</code>  ，其遍历结果为<br><code>（0,7）， （1,8）， （2，9）</code></p></li><li><p>（LeetCode1）dict()用于创建一个字典，有三种创建方式：关键字、可迭代对象、映射。<br>关键字：<code>nums = dict(x=0, y=1)</code><br>可迭代对象：<code>nums = dict([('x', 0), ('y', 1)])</code><br>映射：<code>nums = {'x':0, 'y':1}    nums = dict({'x':0, 'y':1}) </code></p></li><li><p>（LeetCode1）判断字典里是否包含某个key：Python3不支持has_key()了，使用in或not in；<code>if i in hashkey：</code>。</p></li><li><p>（LeetCode9回文数）Python中的短除法是//</p></li><li><p>（LeetCode14最长公共前缀）Python不支持自增语法（++）。</p></li><li><p>（LeetCode20有效的括号）list()用于创建一个栈</p></li><li><p>Python==代码规范==<br>（1）命名规范<br>模块命名：模块尽量使用小写命名，首字母保持小写，尽量不用下划线（除非多个单词，且数量不多的情况下）。<br>类命名：大驼峰；私有类可用一个下划线开头。<br>函数命名：一律小写，如有多个单词，用下划线分开。</p><pre><code>类内私有函数命名：用双下划线开头，该函数不可被继承访问。</code></pre><p>变量命名：尽量小写，如有多个单词，可用下划线分开；类内私有变量用双下划线开头，该变量不可被继承访问；常量全大写，如有多个单词，用下划线分类<br>（2）代码规范<br>空一行：类成员函数之间，或者用于区分不同逻辑块。<br>空两行：类与类、类与函数，函数与函数之间。<br>换行：反斜杠</p></li><li><p>列表推导式<code>nums = [i for i in range(1, 11)]</code></p></li><li><p>字典推导式<code>d1={'a':10, 'b':34}  d2={v:k for k,v in d1.items()}  #key和value互换  </code><br><code>d3={k.upper():v for k, v in d1.items()}</code></p></li><li><p>格式化输出：<code>name="han"  print("na name is %s" %name)</code><br>format()格式化字符串<code>print('{0},{1}'.format('laowang', 20))  #1. 通过位置</code><br><code>print('{name}, {age}'.format(age=18, name="han")) #2. 通过关键字参数</code><br><code> a=['han', 20]   print('my name is {0[0]}, age is {0[1]}'.format(a))    #3. 通过映射list</code><br><code>b={'name': 'han', 'age': 18}    print('my name is {name}, age is {age}'.format(**b)) #4.1 解包</code><br><code>print('my name is {info['name']}, age is {info['age']}'.format(info=b))  #4.2  字典映射</code><br>format还可以用来实现填充与对齐。</p></li><li><p>二分查找<br>（1）当搜索区间[left…right]只有两个元素时：<br>· 如果划分区间的逻辑是<code>left=mid+1</code>和<code>right=mid</code>时，<code>while(left&lt;right)</code>退出循环后<code>left==right</code>成立，此时mid正常下取整就行；<br>· 如果划分区间的逻辑是<code>left=mid</code>和<code>right=mid-1</code>时，<code>while(left&lt;right)</code>退出循环后left==right成立，此时为了避免死循环，mid应该上取整。<br>（2</p></li><li><p>拆包：快速提取数据的一种方式<br>(1)<br><code>num1, num2, num3 = [1,2,3]    #对列表拆包，有序的</code><br>对集合拆包，结果是无序的<br>对字典拆包，默认取到的是key，且无序；当然也可以实现取value或者key-value对 </p><p>(2)函数返回值拆包<br><code>high, weight, age = get_my_info()</code><br>(3)通过*和**拆包</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token operator">+</span>c<span class="token punctuation">)</span>nums<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>test<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">#不简洁</span>test<span class="token punctuation">(</span><span class="token operator">*</span>nums<span class="token punctuation">)</span><span class="token comment">#单*可以跟列表、元组、集合</span><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> web_site<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>web_site<span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>info <span class="token operator">=</span> <span class="token punctuation">{</span>    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"韩"</span><span class="token punctuation">,</span>    <span class="token string">"web_site"</span><span class="token punctuation">:</span> <span class="token string">"www.baidu.com"</span><span class="token punctuation">,</span>    <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">}</span>test<span class="token punctuation">(</span><span class="token operator">**</span>info<span class="token punctuation">)</span><span class="token comment">#拆包的结果是命名参数</span><span class="token comment"># 更改函数形参名，还需要更改字典的key，故不推荐</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(4)星号拆包和不定长参数搭配使用</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230228091110328.png" alt="image-20230228091110328"><br>(5)</p></li><li><p>不定长参数<br>*args：表示调用函数时多余的<strong>未命名</strong>参数都以元组形式存储到args中；</p><p>**kwargs：表示调用函数时多余的<strong>命名</strong>参数都会以键值对形式存储到kwargs中。</p></li><li><p>匿名函数</p><p>默认自带return，适合书写具有简短代码的函数<br>（1）</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_test_func <span class="token operator">=</span> <span class="token keyword">lambda</span> a<span class="token punctuation">,</span> b<span class="token punctuation">:</span> a<span class="token operator">+</span>b <span class="token comment">#先定义变量指向匿名函数</span>num <span class="token operator">=</span> my_test_func<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>（2）匿名函数可以做实参</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fun</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> opt<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>opt<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span>fun<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y<span class="token punctuation">:</span> x<span class="token operator">+</span>y<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>（3）</p><pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment">#字典排序</span>stus <span class="token operator">=</span> <span class="token punctuation">[</span>    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"wanglaoshi"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"wanghanshu"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">}</span><span class="token punctuation">,</span>    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"hanshuyao1"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token comment">#不使用匿名函数</span><span class="token keyword">def</span> <span class="token function">sort_by_age</span><span class="token punctuation">(</span>temp_dict<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">return</span> temp_dict<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span>stus<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>sort_by_age<span class="token punctuation">)</span><span class="token comment">#按age排序</span><span class="token comment">#使用匿名函数</span>stus<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> temp_dict<span class="token punctuation">:</span> temp_dict<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>面向对象<br>（1）定义类<br>定义类有两种方式：新式类和经典类，个人感觉只记住一个吧；</p><p>object是Python里所有类的最顶级父类；</p><p>类名使用大驼峰命名规则；</p><p>实例方法的第一个参数一般是self，表示实例对象本身，当然也可以将self换为其他名字，其作用是一个变量，这个变量指向了实例变量。<br>（2）实例方法和实例属性<br>我们把创建出来的对象成为实例对象，简称对象；所以实例属性就是这个对象的属性；<br>实例方法的定义方法和普通函数类似，唯一区别在于形参中第一个参数是self；通过对象名,方法名()调用。<br>（3）私有属性/方法<br>python中的私有都是假的，只不过不能通过对象名.变量名进行访问。（只是进行了重命名）<br>将__属性名改成了_类名__属性名。<br>（4）__str__()<br>打印某个实例对象时，自定义打印信息，不然会打印object。<br>（5）super<br>如果父类中的方法在派生的子类中不能满足其需求的话，可以在子类中通过重写解决这个问题，但是很多情况下，父类中的方法并不是全部一点不能用，即子类的需求往往是在父类方法实现的功能基础上提出了更多的需求，此时如果我们在子类中重写此方法时就会出现很多冗余代码。解决：在子类重写的方法中通过调用父类中被重写的方法（super）。<br>（6）静态方法<br>如果一个方法不写self即不需要实例对象的引用，此时在定义方法的时候可以用@staticmethod对函数进行修饰，被修饰的函数可以不写self。<br>如果不需要对象，那么就可以讲方法用@staticmethod进行修饰，如此一来此方法就变成了静态方法。<br>可以通过实例对象.静态方法()或者类名.静态方法()方式调用；实例方法只能通过实例对象方法。<br>（7）类属性<br>在class内且在def之外定义的变量<br>（8）类方法<br>使用@classmethod进行修饰，且第一个形参为cls。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PyQt5积累</title>
+      <link href="/2023/03/02/pyqt5-ji-lei/"/>
+      <url>/2023/03/02/pyqt5-ji-lei/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230216162410242.png" alt="image-20230216162410242"><br><code>app=QApplication(sys.argv)</code>Qt制作的每个程序有且仅有一个QApplication；sys.argv当做参数的目的是将运行时的命令参数传递给QApplication对象。<br><code>app.exec_()</code>程序进入循环等待状态，一定要写，不然一闪而过。</p></li><li><p>窗口内的所有控件，若想在窗口中显示，都需要表示它的父亲是谁，而不是直接调用show函数。<br>可以在控件被创建的同时指定父亲（parent参数）；也可以在创建控件之后再指定（setParent函数）</p></li><li><p>PyQt5的自定义信号必须在类属性的位置去定义，不能放在实例方法内。</p></li><li><p>QMessageBox控件中的警告对话框实现</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">closeEvent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> event<span class="token punctuation">:</span> QtGui<span class="token punctuation">.</span>QCloseEvent<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token boolean">None</span><span class="token punctuation">:</span>    ok <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QPushButton<span class="token punctuation">(</span><span class="token punctuation">)</span>    ok<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">u'确定'</span><span class="token punctuation">)</span>    cancel <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QPushButton<span class="token punctuation">(</span><span class="token punctuation">)</span>    cancel<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">u'取消'</span><span class="token punctuation">)</span>    msg <span class="token operator">=</span> QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">(</span>QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">.</span>Warning<span class="token punctuation">,</span> <span class="token string">u'关闭'</span><span class="token punctuation">,</span> <span class="token string">u'是否关闭？'</span><span class="token punctuation">)</span>    msg<span class="token punctuation">.</span>addButton<span class="token punctuation">(</span>ok<span class="token punctuation">,</span> QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">.</span>ActionRole<span class="token punctuation">)</span>    msg<span class="token punctuation">.</span>addButton<span class="token punctuation">(</span>cancel<span class="token punctuation">,</span> QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">.</span>RejectRole<span class="token punctuation">)</span>    <span class="token keyword">if</span> msg<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> QtWidgets<span class="token punctuation">.</span>QMessageBox<span class="token punctuation">.</span>RejectRole<span class="token punctuation">:</span>        event<span class="token punctuation">.</span>ignore<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        event<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>QLabel（里面显示图片）自适应窗口大小</p></li></ol><pre class="line-numbers language-python" data-language="python"><code class="language-python">self<span class="token punctuation">.</span>label_show_video<span class="token punctuation">.</span>setAutoFillBackground<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PyQt5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode刷题记录</title>
+      <link href="/2023/03/02/leetcode-shua-ti-ji-lu/"/>
+      <url>/2023/03/02/leetcode-shua-ti-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h1><h2 id="2023-03"><a href="#2023-03" class="headerlink" title="2023.03"></a>2023.03</h2><h3 id="0301"><a href="#0301" class="headerlink" title="0301"></a>0301</h3><h4 id="LC287-寻找重复数"><a href="#LC287-寻找重复数" class="headerlink" title="LC287 寻找重复数"></a>LC287 寻找重复数</h4><p>问题的转化值得学习，只不过评论区称之为“奇淫技巧”。<br>好神奇居然刷到了这道题，所以为什么二分模板行不通呢？</p><h4 id="LC2373-矩阵中的局部最大值"><a href="#LC2373-矩阵中的局部最大值" class="headerlink" title="LC2373 矩阵中的局部最大值"></a>LC2373 矩阵中的局部最大值</h4><p>本质上是在实现最大池化。<strong>数组的申请与初始化值得学习</strong>，只不过自己把四层循环写错了，短时间内也没意识到哪里错了，回头再看。<br>。。。。。。。无语了，<strong>命名冲突</strong>，使用了两个n。。。。。。</p><h3 id="0302"><a href="#0302" class="headerlink" title="0302"></a>0302</h3><h4 id="LC面试题05-02"><a href="#LC面试题05-02" class="headerlink" title="LC面试题05.02"></a>LC面试题05.02</h4><p>二进制小数转十进制小数规则记一下。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>202303</title>
       <link href="/2023/03/01/202303/"/>
       <url>/2023/03/01/202303/</url>
@@ -126,7 +285,7 @@
       
       <categories>
           
-          <category> 机器学习 </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
