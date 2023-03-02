@@ -29,19 +29,6 @@
     
     
     <entry>
-      <title>Transformer</title>
-      <link href="/2023/03/02/transformer/"/>
-      <url>/2023/03/02/transformer/</url>
-      
-        <content type="html"><![CDATA[<p>【ECCV2022】 - MOTR：使用Transformer进行端到端的多目标追踪</p><p>【Paper】<a href="https://arxiv.org/abs/2105.03247">https://arxiv.org/abs/2105.03247</a></p><p>【Code】<a href="https://github.com/megvii-research/MOTR">https://github.com/megvii-research/MOTR</a></p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>​        在多目标追踪中，对象/目标的时序建模是一项关键性挑战。现有方法通过基于运动的和基于外观的相似度来进行检测结果的关联，从而实现跟踪；而这种关联的后处理特性，使得其不能够端到端地利用视频序列的时序变量。</p><p>​        基于此，作者提出MOTR。MOTR对DETR进行扩展，并引入track query</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>河工大Pytorch深度学习实践</title>
       <link href="/2023/03/02/he-gong-da-pytorch-shen-du-xue-xi-shi-jian/"/>
       <url>/2023/03/02/he-gong-da-pytorch-shen-du-xue-xi-shi-jian/</url>
