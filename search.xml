@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>论文笔记_Transformer-in-Transformer</title>
+      <link href="/2023/03/03/lun-wen-bi-ji-transformer-in-transformer/"/>
+      <url>/2023/03/03/lun-wen-bi-ji-transformer-in-transformer/</url>
+      
+        <content type="html"><![CDATA[<p>【Paper】<a href="https://arxiv.org/abs/2105.03247">https://arxiv.org/abs/2105.03247</a></p><p>【Code】<a href="https://github.com/megvii-research/MOTR">https://github.com/megvii-research/MOTR</a></p><p>【Reference】<a href="https://zhuanlan.zhihu.com/p/354913120">https://zhuanlan.zhihu.com/p/354913120</a></p><h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/v2-12f7157dec309ed2e5e89ebd97ad3ed2_720w.webp" alt="ViT整体结构" style="zoom: 80%;"><p>ViT将图像转化为patch并进行Flatten操作后输入Transformer，因为Transformer需要的是序列（Sequence）的输入信号，而我们有的是image的2D输入信号，直接把图片分块进行Flatten操作是一种intuitive的方式，但这种方式能不能完美建模图像呢？</p><p>很明显不能，因为我们缺少每个patch的内部信息。Transformer之所以有效，是因为它能处理长度为N的输入序列中这N个输入之间的关系，而对于每个输入的内部信息，它是无能为力的，因为ViT将每个patch展平为一个向量，破坏了每个patch的内部信息。所以我们可以认为，每个输入的内部信息，即每个patch的内部信息，没有被Transformer所建模。</p><p>所以<strong>本文动机：使得Transformer既能够建模不同patch之间的关系，又能够建模每个patch内部的关系</strong>。</p><h1 id="整体结构"><a href="#整体结构" class="headerlink" title="整体结构"></a>整体结构</h1><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230303093835252.png" alt="TNT整体结构" style="zoom: 67%;"><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/v2-b7ac4d52e1e18b7620f3613e7b4b78d6_720w.webp" alt="TNT整体结构"></p><h2 id="输入Transformer之前"><a href="#输入Transformer之前" class="headerlink" title="输入Transformer之前"></a>输入Transformer之前</h2><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230303095150561.png" alt="划分patch"></p><p>首先还是将图片划分为n个patch<br>$$<br>\mathcal{X} = [{X^1},{X^2}, \cdots ,{X^n}] \in {\mathbb{R}^{n \times p \times p \times 3}}<br>$$</p><p>Outer Transformer Block建模sentence embedding之间的global信息；<br>Inner Transformer Block建模word embedding之间的local structure信息。<br>两种Block对应两个不同的数据流，其中Outer Block的数据流在不同patch（sentence embedding）之间运行，而Inner Block的数据流在每个patch内部运行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Transformer </tag>
+            
+            <tag> TNT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>论文笔记_MOTR-End-to-End-Multiple-Object-Tracking-with-Transformer</title>
       <link href="/2023/03/02/lun-wen-bi-ji-motr-end-to-end-multiple-object-tracking-with-transformer/"/>
       <url>/2023/03/02/lun-wen-bi-ji-motr-end-to-end-multiple-object-tracking-with-transformer/</url>
@@ -242,7 +269,7 @@
       <link href="/2022/11/23/mathtype-shu-xie-gong-shi-jing-yan-ji-lu/"/>
       <url>/2022/11/23/mathtype-shu-xie-gong-shi-jing-yan-ji-lu/</url>
       
-        <content type="html"><![CDATA[<h1 id="1-中-英文状态下输入"><a href="#1-中-英文状态下输入" class="headerlink" title="1. 中/英文状态下输入"></a>1. 中/英文状态下输入</h1><p>中文状态下输入字母不是斜体的，书写公式时建议切换输入法至英文状态。</p><h1 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h1><h2 id="2-1-最常用（Ctrl-字母）"><a href="#2-1-最常用（Ctrl-字母）" class="headerlink" title="2.1 最常用（Ctrl+字母）"></a>2.1 最常用（Ctrl+字母）</h2><p>Tab跳格<br>[Ctrl+H]上标    [Ctrl+L]下标    [Ctrl+J]上下标<br>[Ctrl+9/0]小括号()    [Ctrl+[ ]中括号[]    [Ctrl+shift+[ ]大括号{}        注：ctrl快捷键输出的括号和通常使用shift输出的括号是不一样的。<br>[Ctrl+R]根号radical    [CTRL+F]分式fractional    [Ctrl+/]斜杠分式</p><h2 id="2-2-次常用（前缀键，字母）"><a href="#2-2-次常用（前缀键，字母）" class="headerlink" title="2.2 次常用（前缀键，字母）"></a>2.2 次常用（前缀键，字母）</h2><h2 id="2-3-希腊字母的快捷键（Ctrl-G，字母）"><a href="#2-3-希腊字母的快捷键（Ctrl-G，字母）" class="headerlink" title="2.3 希腊字母的快捷键（Ctrl+G，字母）"></a>2.3 希腊字母的快捷键（Ctrl+G，字母）</h2>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-中-英文状态下输入"><a href="#1-中-英文状态下输入" class="headerlink" title="1 中/英文状态下输入"></a>1 中/英文状态下输入</h3><p>中文状态下输入字母不是斜体的，书写公式时建议切换输入法至英文状态。</p><h3 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2 常用快捷键"></a>2 常用快捷键</h3><h4 id="2-1-最常用（Ctrl-字母）"><a href="#2-1-最常用（Ctrl-字母）" class="headerlink" title="2.1 最常用（Ctrl+字母）"></a>2.1 最常用（Ctrl+字母）</h4><p>Tab跳格<br>[Ctrl+H]上标    [Ctrl+L]下标    [Ctrl+J]上下标<br>[Ctrl+9/0]小括号()    [Ctrl+[ ]中括号[]    [Ctrl+shift+[ ]大括号{}        注：ctrl快捷键输出的括号和通常使用shift输出的括号是不一样的。<br>[Ctrl+R]根号radical    [CTRL+F]分式fractional    [Ctrl+/]斜杠分式</p><h4 id="2-2-次常用（前缀键，字母）"><a href="#2-2-次常用（前缀键，字母）" class="headerlink" title="2.2 次常用（前缀键，字母）"></a>2.2 次常用（前缀键，字母）</h4><h4 id="2-3-希腊字母的快捷键（Ctrl-G，字母）"><a href="#2-3-希腊字母的快捷键（Ctrl-G，字母）" class="headerlink" title="2.3 希腊字母的快捷键（Ctrl+G，字母）"></a>2.3 希腊字母的快捷键（Ctrl+G，字母）</h4><h3 id="3-花体字母"><a href="#3-花体字母" class="headerlink" title="3 花体字母"></a>3 花体字母</h3><p>选中输入字母后更换字体为Euclid Math One</p><p>Plain Text可能不支持该字体，在剪切和复制首选项中设置成AMSLaTex</p><h3 id="4-公式复制后不能粘贴"><a href="#4-公式复制后不能粘贴" class="headerlink" title="4 公式复制后不能粘贴"></a>4 公式复制后不能粘贴</h3><p>需要在MathType中进行设置</p><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/f51f174aca074f2c9698a07320c82c0f.png" alt="剪切和复制首选项设置"></p>]]></content>
       
       
       <categories>
