@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    365
+                    405
                 </div>
                 
 
@@ -469,6 +469,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/v2-b7ac4d52e1e18b7620f3613e7b4b78d6_720w.webp" alt="TNT整体结构"></p>
 <h2 id="输入Transformer之前"><a href="#输入Transformer之前" class="headerlink" title="输入Transformer之前"></a>输入Transformer之前</h2><p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230303095150561.png" alt="划分patch"></p>
 <p>首先还是将图片划分为n个patch<br>$$<br>\mathcal{X} = [{X^1},{X^2}, \cdots ,{X^n}] \in {\mathbb{R}^{n \times p \times p \times 3}}<br>$$</p>
+<p>ViT做到这里就把它们输入到Transformer了，本文为了更好的学习图片中global和local信息的关系，还需要再进行一步：</p>
 <p>Outer Transformer Block建模sentence embedding之间的global信息；<br>Inner Transformer Block建模word embedding之间的local structure信息。<br>两种Block对应两个不同的数据流，其中Outer Block的数据流在不同patch（sentence embedding）之间运行，而Inner Block的数据流在每个patch内部运行。</p>
 
                 
@@ -878,7 +879,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.1k</span>
+                        class="white-color">5.2k</span>
             
             
             
