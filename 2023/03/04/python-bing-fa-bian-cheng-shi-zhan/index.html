@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Typora使用经验积累, Junkman,Python">
-    <meta name="description" content="Typora使用经验积累">
+    <meta name="keywords" content="Python并发编程实战, Junkman,Python">
+    <meta name="description" content="B站蚂蚁学Python的Python多线程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Typora使用经验积累 | JunkMan</title>
+    <title>Python并发编程实战 | JunkMan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -379,12 +379,12 @@ mjx-container[display="true"] + br {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Typora使用经验积累</h1>
+                    <h1 class="description center-align post-title">Python并发编程实战</h1>
                 </div>
             </div>
         </div>
@@ -500,8 +500,12 @@ mjx-container[display="true"] + br {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                <span class="chip bg-color">多线程</span>
                             </a>
                         
                     </div>
@@ -512,8 +516,8 @@ mjx-container[display="true"] + br {
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Tools/" class="post-category">
-                                Tools
+                            <a href="/categories/Coding/" class="post-category">
+                                Coding
                             </a>
                         
                     </div>
@@ -525,7 +529,7 @@ mjx-container[display="true"] + br {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-23
+                    2023-03-04
                 </div>
                 
 
@@ -534,14 +538,14 @@ mjx-container[display="true"] + br {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    226
+                    708
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -564,21 +568,27 @@ mjx-container[display="true"] + br {
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1. 代码块"></a>1. 代码块</h1><p>连续输入三个‘~’再输入想使用的语言，代码块建成之后也可在右下角手动修改所用语言。</p>
-<h1 id="2-MathType公式复制到Typora"><a href="#2-MathType公式复制到Typora" class="headerlink" title="2. MathType公式复制到Typora"></a>2. MathType公式复制到Typora</h1><ol>
-<li><p>在MathType打好公式并复制，需在MathType中将复制格式修改为PlainTex</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123153510409.png" alt="image-20221123153510409"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123153127939.png" alt="image-20221123153127939"></p>
-</li>
-<li><p>粘贴到MathType会这样显示：<br><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154440805.png" alt="image-20221123154440805"><br>Typora不会将粘贴过来的$$识别为公式栏，需手动输入$$并按回车创建公式栏</p>
-</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154657476.png" alt="image-20221123154657476"><br>然后将复制过来的文本删除两端的$$粘贴到公式栏<br><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221123154805596.png" alt="image-20221123154805596"></p>
-<h1 id="3-条件概率"><a href="#3-条件概率" class="headerlink" title="3. 条件概率"></a>3. 条件概率</h1><p>菜单栏：编辑-&gt;插入符号</p>
-<h1 id="4-与Hexo的小冲突"><a href="#4-与Hexo的小冲突" class="headerlink" title="4. 与Hexo的小冲突"></a>4. 与Hexo的小冲突</h1><p>写公式时可能会出现’{ {‘的字符串，会报错</p>
-<p><img src="C:\Users\23509\AppData\Roaming\Typora\typora-user-images\image-20221123161536878.png" alt="image-20221123161536878"></p>
-<p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=hexo&amp;spm=1001.2101.3001.7020">hexo</a> 的文章渲染使用的是 <code>Nunjucks</code> ，因为在使用<code>mathjax</code>公式，造成了<code>{ {</code>重叠，而它会在生成文章时将那几个大括号识别成自己的语法，这样就会报错。</p>
-<p>用空格隔开就好；</p>
+                <h1 id="python并发编程介绍">Python并发编程介绍</h1>
+<p>并发编程主要目的：提升程序运行速度</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230304145908295.png" alt="程序提速方法" style="zoom: 80%;"></p>
+<h2 id="python对并发编程的支持">Python对并发编程的支持</h2>
+<p>多线程：threading，利用CPU和IO可以同时执行的原理，让CPU不会干巴巴地等待IO完成。 多进程：multiprocessing，利用多核CPU的能力，真正地并行执行任务。 异步IO：asyncio，在单线程利用CPU和IO同时执行的原理，实现函数异步执行。</p>
+<p>Python提供的额外辅助函数： 使用Lock对资源加锁，防止冲突访问； 使用Queue实现不同线程/进程之间的数据通信，实现生产者-消费者模式； （建议使用）使用线程池Pool/进程池Pool，简化线程/进行的任务提交、等待结束、获取结果； 使用subprocess启动外部程序的进程（比如外部写好exe文件），并进行输入输出交互。</p>
+<h1 id="怎样选择多线程多进程多协程">怎样选择多线程多进程多协程</h1>
+<h2 id="cpu密集型计算和io密集型计算">CPU密集型计算和IO密集型计算</h2>
+<p>CPU-bound：CPU密集型，也叫计算密集型，CPU是程序运行的瓶颈。IO在很短世家内就可以完成，CPU需要大量的计算和处理，特点是CPU占用率相当高。例如：压缩解压缩、加密解密、正则表达式搜索。</p>
+<p>IO-bound：IO密集型，指的是系统运作大部分的状况是CPU在等IO（硬盘/内存）的读写操作，CPU占用率低。例如：文件处理程序、网络爬虫程序、读写数据库程序。</p>
+<h2 id="多线程多进程多协程的对比">多线程、多进程、多协程的对比</h2>
+<p>一个进程中可以启动N个线程；一个线程中可以启动N个协程。</p>
+<p>多进程Process（multiprocessing）： 优点：可以利用多核CPU并行运算； 缺点：占用资源最多，可启动数目比线程少。 适用于：CPU密集型计算。</p>
+<p>多线程Thread（threading）： 优点：相比进程，更加轻量级、占用资源少。 缺点： 相比进程：同时只能使用单个CPU，多线程只能并发执行，不能利用多CPU。 相比协程：启动数目有限制，占用内存资源，有线程切换开销（协程没有）。 适用于：IO密集型，且同时运行的任务数目要求不多。</p>
+<p>多协程Coroutine（asyncio）： 优点：内存开销最少、启动协程数量最多 缺点：支持的库有限（aiohttp vs requests，平常爬虫常用requests，但是想要写多协程，只能改换aiohttp库）、代码实现复杂。 适用于：IO密集型计算、需要超多任务运行、但是有现成库支持的场景。</p>
+<h2 id="如何选择">如何选择</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230304153234103.png" alt="如何选择" style="zoom:80%;"></p>
+<h1 id="python速度慢的原因">Python速度慢的原因</h1>
+<p>Python速度慢的原因： （1）动态类型语言，边解释边执行； （2）GIL的存在使得Python无法利用多核CPU并发执行。</p>
+<h2 id="gil">GIL</h2>
+<p>全局解释器锁（Global Interpreter Lock，GIL）</p>
 
                 
             </div>
@@ -605,7 +615,7 @@ mjx-container[display="true"] + br {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://junkman996.github.io/2022/11/23/typora-shi-yong-jing-yan-ji-lei/">https://junkman996.github.io/2022/11/23/typora-shi-yong-jing-yan-ji-lei/</a>
+                    <a href="https://junkman996.github.io/2023/03/04/python-bing-fa-bian-cheng-shi-zhan/">https://junkman996.github.io/2023/03/04/python-bing-fa-bian-cheng-shi-zhan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,8 +653,12 @@ mjx-container[display="true"] + br {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                    <span class="chip bg-color">多线程</span>
                                 </a>
                             
                         </div>
@@ -696,36 +710,44 @@ mjx-container[display="true"] + br {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/24/yue-du-lun-wen-ji-lei-ci-hui/">
+                <a href="/2023/03/11/xiao-yang-ben-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="阅读论文积累词汇">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="小样本学习">
                         
-                        <span class="card-title">阅读论文积累词汇</span>
+                        <span class="card-title">小样本学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            阅读论文过程中积累的英文词汇和一些表述
+                            王树森讲的小样本学习
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-11
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Paper/" class="post-category">
-                                    Paper
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">小样本学习</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -737,44 +759,32 @@ mjx-container[display="true"] + br {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/23/mathtype-shu-xie-gong-shi-jing-yan-ji-lu/">
+                <a href="/2023/03/03/lun-wen-bi-ji-an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="MathType书写公式经验记录">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="论文笔记_An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale">
                         
-                        <span class="card-title">MathType书写公式经验记录</span>
+                        <span class="card-title">论文笔记_An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MathTpye使用经验积累
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Tools/" class="post-category">
-                                    Tools
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Junkman
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MathType/">
-                        <span class="chip bg-color">MathType</span>
-                    </a>
-                    
                 </div>
                 
             </div>
