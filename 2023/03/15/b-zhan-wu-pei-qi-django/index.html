@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git命令解释与踩坑记录, Junkman,Python">
-    <meta name="description" content="使用Git过程中遇到的问题">
+    <meta name="keywords" content="B站武沛齐Django, Junkman,Python">
+    <meta name="description" content="武沛齐Django">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Git命令解释与踩坑记录 | JunkMan</title>
+    <title>B站武沛齐Django | JunkMan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -379,12 +379,12 @@ mjx-container[display="true"] + br {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git命令解释与踩坑记录</h1>
+                    <h1 class="description center-align post-title">B站武沛齐Django</h1>
                 </div>
             </div>
         </div>
@@ -500,8 +500,8 @@ mjx-container[display="true"] + br {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
+                            <a href="/tags/Django/">
+                                <span class="chip bg-color">Django</span>
                             </a>
                         
                     </div>
@@ -512,8 +512,8 @@ mjx-container[display="true"] + br {
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Tools/" class="post-category">
-                                Tools
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
                             </a>
                         
                     </div>
@@ -525,7 +525,7 @@ mjx-container[display="true"] + br {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-22
+                    2023-03-15
                 </div>
                 
 
@@ -534,14 +534,14 @@ mjx-container[display="true"] + br {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    36
+                    520
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -564,11 +564,71 @@ mjx-container[display="true"] + br {
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20221122200729751.png"></p>
-<h2 id="1-删除remote-repository的某个文件"><a href="#1-删除remote-repository的某个文件" class="headerlink" title="1. 删除remote repository的某个文件"></a>1. 删除remote repository的某个文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> test.txt
-<span class="token comment">#在实践中，该命令将workspace和local repository中的文件都删除了</span>
-<span class="token comment">##然后commit+push</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="1-安装Django"><a href="#1-安装Django" class="headerlink" title="1. 安装Django"></a>1. 安装Django</h1><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">pip install diango<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">D:\ProgramFile\Anaconda3\envs\django
+	<span class="token list punctuation">-</span> python.exe
+	<span class="token list punctuation">-</span> Scripts
+		<span class="token list punctuation">-</span> pip.exe
+		<span class="token list punctuation">-</span> django-admin.exe	【Django提供的工具，帮助创建django项目中的文件和文件夹】
+	<span class="token list punctuation">-</span> Lib
+		<span class="token list punctuation">-</span> 内置模块
+		<span class="token list punctuation">-</span> site-packages	【第三方库】
+			<span class="token list punctuation">-</span> flask
+			<span class="token list punctuation">-</span> django	【Django框架的源码】
+			<span class="token list punctuation">-</span> cv2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2. 创建项目"></a>2. 创建项目</h1><h2 id="在终端创建"><a href="#在终端创建" class="headerlink" title="在终端创建"></a>在终端创建</h2><p>diango的项目中会有一些默认的文件和文件夹。</p>
+<p>进入项目目录（希望django项目被存放的位置），执行命令创建项目：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token string">"D:\ProgramFile\Anaconda3\envs\PyQt\Scripts\django-admin.exe"</span> startproject mysite<span class="token punctuation">(</span>项目名称<span class="token punctuation">)</span>
+<span class="token comment"># 如添加了Scripts至环境变量，可直接使用如下命令:</span>
+django<span class="token operator">-</span>admin startproject 项目名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="专业版PyCharm"><a href="#专业版PyCharm" class="headerlink" title="专业版PyCharm"></a>专业版PyCharm</h2><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>命令行创建的项目是标准的;</p>
+<p>pycharm在标准的基础上加了一些东西，templates文件夹 。</p>
+<p>项目默认文件介绍：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">mysite
+	<span class="token list punctuation">-</span> manage.py		【项目的管理、启动项目、创建app、数据管理】【常用，无需修改】
+	<span class="token list punctuation">-</span> mysite
+		<span class="token list punctuation">-</span> <span class="token bold"><span class="token punctuation">__</span><span class="token content">init</span><span class="token punctuation">__</span></span>.py
+		<span class="token list punctuation">-</span> settings.py	【项目配置】【经常修改】
+		<span class="token list punctuation">-</span> urls.py	【URL和函数的对应关系】【经常修改】
+		<span class="token list punctuation">-</span> asgi.py	【接收网络请求】【不要修改】【异步方式，还不太成熟，用得少】
+		<span class="token list punctuation">-</span> wsgi.py	【接收网络请求】【不要修改】【同步方式，大多用这个】<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="3-APP"><a href="#3-APP" class="headerlink" title="3. APP"></a>3. APP</h1><p>简单场景下，开发项目只需要创建一个app即可。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 创建app</span>
+python manage<span class="token punctuation">.</span>py startapp app01
+python manage<span class="token punctuation">.</span>py startapp app02
+
+app01
+	<span class="token operator">-</span> __init__<span class="token punctuation">.</span>py
+    <span class="token operator">-</span> admin<span class="token punctuation">.</span>py	【固定】【django默认提供了admin后台管理】
+    <span class="token operator">-</span> apps<span class="token punctuation">.</span>py	【固定】app启动类
+    <span class="token operator">-</span> migrations	【固定】【数据库变更记录】
+    	<span class="token operator">-</span> __init__<span class="token punctuation">.</span>py
+    <span class="token operator">-</span> models<span class="token punctuation">.</span>py	【重要，对数据库进行操作】
+    <span class="token operator">-</span> tests<span class="token punctuation">.</span>py	【固定，不用动】【写单元测试】
+    <span class="token operator">-</span> views<span class="token punctuation">.</span>py	【重要，函数】<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="http://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316152654624.png"></p>
+<img src="http://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316152613151.png" style="zoom:80%;">
+
+<h1 id="4-快速上手"><a href="#4-快速上手" class="headerlink" title="4. 快速上手"></a>4. 快速上手</h1><h2 id="4-1-随便写一个页面"><a href="#4-1-随便写一个页面" class="headerlink" title="4.1 随便写一个页面"></a>4.1 随便写一个页面</h2><h3 id="确保app已注册"><a href="#确保app已注册" class="headerlink" title="确保app已注册"></a>确保app已注册</h3><p>settings.py</p>
+<p>在INSTALLED_APPS中加入：’app01.apps.App01Config’。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316155421308.png"></p>
+<h3 id="编写URL和视图函数对应关系"><a href="#编写URL和视图函数对应关系" class="headerlink" title="编写URL和视图函数对应关系"></a>编写URL和视图函数对应关系</h3><p>urls.py</p>
+<p>urlpatterns中加入类似：path(‘admin/‘, admin.site.urls)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316160651568.png"></p>
+<h3 id="编写视图函数"><a href="#编写视图函数" class="headerlink" title="编写视图函数"></a>编写视图函数</h3><p>views.py</p>
+<p>有一个默认参数request</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316161905845.png"></p>
+<h3 id="启动Django"><a href="#启动Django" class="headerlink" title="启动Django"></a>启动Django</h3><p>python manage.py runserver</p>
+<p>也可以使用Pycharm</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Junkman996/FigureBed/img/image-20230316162110273.png"></p>
+<h2 id="4-2-templates模板"><a href="#4-2-templates模板" class="headerlink" title="4.2 templates模板"></a>4.2 templates模板</h2><p>templates文件夹里</p>
+<h2 id="4-3-静态文件"><a href="#4-3-静态文件" class="headerlink" title="4.3 静态文件"></a>4.3 静态文件</h2><p>static文件夹里</p>
+<p>在开发过程中，图片、css、js、plugins都会被当作静态文件处理。</p>
 
                 
             </div>
@@ -595,7 +655,7 @@ mjx-container[display="true"] + br {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://junkman996.github.io/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/">https://junkman996.github.io/2022/11/22/git-ming-ling-jie-shi-yu-cai-keng-ji-lu/</a>
+                    <a href="https://junkman996.github.io/2023/03/15/b-zhan-wu-pei-qi-django/">https://junkman996.github.io/2023/03/15/b-zhan-wu-pei-qi-django/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -633,8 +693,8 @@ mjx-container[display="true"] + br {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
+                                <a href="/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
                                 </a>
                             
                         </div>
@@ -686,31 +746,31 @@ mjx-container[display="true"] + br {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/23/difference-between-working-directory-and-local-repository/">
+                <a href="/2023/03/17/pytorch-ji-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Difference between working directory and local repository">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Pytorch积累">
                         
-                        <span class="card-title">Difference between working directory and local repository</span>
+                        <span class="card-title">Pytorch积累</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Repository和Workspace的区别
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Tools/" class="post-category">
-                                    Tools
+                            <a href="/categories/Coding/" class="post-category">
+                                    Coding
                                 </a>
                             
                             
@@ -720,8 +780,8 @@ mjx-container[display="true"] + br {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/Pytorch/">
+                        <span class="chip bg-color">Pytorch</span>
                     </a>
                     
                 </div>
@@ -735,31 +795,31 @@ mjx-container[display="true"] + br {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/13/leetcode135-fen-fa-tang-guo/">
+                <a href="/2023/03/15/fei-jiang-shen-du-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="LeetCode135：分发糖果">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="飞桨深度学习">
                         
-                        <span class="card-title">LeetCode135：分发糖果</span>
+                        <span class="card-title">飞桨深度学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            贪心思想+规则定义+两遍循环
+                            关于飞桨官网的深度学习资料
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
@@ -769,8 +829,8 @@ mjx-container[display="true"] + br {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                        <span class="chip bg-color">贪心</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
